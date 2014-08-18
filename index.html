@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html manifest="/cache.manifest">
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="bowl-of-soup.png">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self';script-src 'self'; font-src 'self'">
+		<title>Domada</title>
+		<link href="/vendor/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="timeline.css">
+
+		<template id="work-node"><li class="inactive" data-duration="25" data-type="work">
+			<div class="timeline-badge danger"><i class="glyphicon glyphicon-wrench"></i></div>
+			<div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Work</h4>
+					<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <span></span></small></p>
+				</div>
+				<div class="timeline-body">
+					<div class="progress"><div class="progress-bar" style="width: 0%"></div></div>
+					<div class="text-right">
+						<button class="start-button btn btn-primary">Start</button>
+						<button class="skip-button btn btn-secondary">Skip</button>
+					</div>
+				</div>
+			</div>
+		</li></template>
+
+		<template id="short-break-node"><li class="timeline-inverted inactive" data-duration="5" data-type="short-break">
+			<div class="timeline-badge warning"><i class="glyphicon glyphicon-gift"></i></div>
+			<div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Short Break</h4>
+					<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <span></span></small></p>
+				</div>
+				<div class="timeline-body"><div class="progress"><div class="progress-bar" style="width: 0%" xria-valuenow="0" aria-min="0" aria-max="100"></div></div>
+					<div class="text-right">
+						<button class="start-button btn btn-primary">Start</button>
+						<button class="skip-button btn btn-secondary">Skip</button>
+					</div>
+				</div>
+			</div>
+		</li></template>
+		<template id="long-break-node"><li class="timeline-inverted inactive" data-duration="15" data-type="long-break">
+			<div class="timeline-badge success"><i class="glyphicon glyphicon-tree-deciduous"></i></div>
+			<div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Long Break</h4>
+					<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <span></span></small></p>
+				</div>
+				<div class="timeline-body"><div class="progress"><div class="progress-bar" style="width: 0%" xria-valuenow="0" aria-min="0" aria-max="100"></div></div>
+					<div class="text-right">
+						<button class="start-button btn btn-primary">Start</button>
+						<button class="skip-button btn btn-secondary">Skip</button>
+					</div>
+				</div>
+			</div>
+		</li></template>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><img src="bowl-of-soup.png"> Domada</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/about">about</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#" id="enable-notifications"><i class="glyphicon glyphicon-unchecked"></i> Notifications</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+
+		<div class="relative container">
+			<ul class="timeline" id="timeline" />
+		</div>
+		<script src="/vendor/moment.min.js"></script>
+		<script src="/vendor/jquery-2.1.1.min.js"></script>
+		<script src="/vendor/bootstrap.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "domada",
+  "version": "0.1.0",
+  "description": "Pomodoro Timetracking",
+  "scripts": {
+    "build" : "make",
+    "deploy" : "make dist && git checkout -b release && rm .gitignore && git add dist && git commit -m deploying && git subtree push --prefix dist 5apps master && git checkout -- .gitignore && git checkout master && git branch -D release"
+  },
+  "author": "Jonas Weber <mail@jonasw.de> (http://jonasw.de/)",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0"
+  }
+}

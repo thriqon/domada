@@ -1,0 +1,8 @@
+
+Domada
+======
+
+    npm install
+    make
+
+

@@ -1,0 +1,23 @@
+
+.side-nav .affix {
+	top: 15px;
+}
+body {
+	position: relative;
+}
+
+.side-nav .active {
+	border-left: 3px solid #428bca;
+}
+
+.side-nav li {
+	border-left: 1px solid white;
+}
+
+nav img {
+	height: 1.2em;
+}
+
+.jumbotron img {
+	height: 60px;
+}
