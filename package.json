@@ -9,6 +9,6 @@
   "author": "Jonas Weber <mail@jonasw.de> (http://jonasw.de/)",
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.8.0"
+    "coffee-script": "^1.12.7"
   }
 }
